@@ -1,0 +1,11 @@
+[Unit]
+Description=Synthetic data replayer (stands in for the collector until real data is enough)
+
+[Service]
+WorkingDirectory=%h/timeseries/pipeline
+ExecStart=%h/timeseries/.venv/bin/python -u service/replay.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

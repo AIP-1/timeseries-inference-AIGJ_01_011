@@ -1,0 +1,39 @@
+{
+ "conditions": {
+  "data": "실데이터(InfluxDB, 추정 시간표)",
+  "period": {
+   "train": "2025-09-03 ~ 2026-08-31",
+   "val": "2026-09-01 ~ 2026-09-30",
+   "test": "2026-10-01 ~ 2026-10-20"
+  },
+  "step": "5min",
+  "lookback_min": 120,
+  "horizon_min": 60,
+  "host": "team4",
+  "machine": "aarch64",
+  "nvpmodel_default": "default_mode",
+  "generated": "2026-10-20 15:35"
+ },
+ "removed": {
+  "co2": 472,
+  "temperature": 0,
+  "humidity": 1
+ },
+ "missing_pct": {
+  "co2": {
+   "사무실": 19.084,
+   "실습실": 12.15,
+   "회의실": 90.473
+  },
+  "temperature": {
+   "사무실": 17.552,
+   "실습실": 12.04,
+   "회의실": 90.543
+  },
+  "humidity": {
+   "사무실": 17.552,
+   "실습실": 12.04,
+   "회의실": 90.543
+  }
+ }
+}

@@ -1,0 +1,695 @@
+{
+ "conditions": {
+  "data": "실데이터(InfluxDB, 추정 시간표)",
+  "period": {
+   "train": "2025-09-03 ~ 2026-08-31",
+   "val": "2026-09-01 ~ 2026-09-30",
+   "test": "2026-10-01 ~ 2026-10-20"
+  },
+  "step": "5min",
+  "lookback_min": 120,
+  "horizon_min": 60,
+  "host": "team4",
+  "machine": "aarch64",
+  "nvpmodel_default": "default_mode",
+  "generated": "2026-10-20 15:35"
+ },
+ "overall": [
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 5,
+   "mae": 12.020430107526881,
+   "n": 16864
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 15,
+   "mae": 20.52058428209994,
+   "n": 16864
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 30,
+   "mae": 29.53800304395952,
+   "n": 16864
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 60,
+   "mae": 47.20332661290322,
+   "n": 16864
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 5,
+   "mae": 27.818203470904493,
+   "n": 16864
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 15,
+   "mae": 34.22095588235294,
+   "n": 16864
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 30,
+   "mae": 43.243925999499254,
+   "n": 16864
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 60,
+   "mae": 60.13042262940123,
+   "n": 16864
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 5,
+   "mae": 138.84540678133652,
+   "n": 16860
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 15,
+   "mae": 138.8289121194148,
+   "n": 16860
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 30,
+   "mae": 138.81244711348359,
+   "n": 16860
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 60,
+   "mae": 138.74582789640172,
+   "n": 16860
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 5,
+   "mae": 0.01832715223186051,
+   "n": 16864
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 15,
+   "mae": 0.03787351472847205,
+   "n": 16864
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 30,
+   "mae": 0.06462566921930063,
+   "n": 16864
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 60,
+   "mae": 0.11716352105358277,
+   "n": 16864
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 5,
+   "mae": 0.06601634834041158,
+   "n": 16864
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 15,
+   "mae": 0.08419573535059197,
+   "n": 16864
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 30,
+   "mae": 0.11058904287521472,
+   "n": 16864
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 60,
+   "mae": 0.16059305207297978,
+   "n": 16864
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 5,
+   "mae": 0.4895624639891544,
+   "n": 16860
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 15,
+   "mae": 0.4898656075241485,
+   "n": 16860
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 30,
+   "mae": 0.4902006806755918,
+   "n": 16860
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 60,
+   "mae": 0.4907161469807377,
+   "n": 16860
+  }
+ ],
+ "by_space": [
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 5,
+   "space": "사무실",
+   "mae": 9.03035239950416
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 5,
+   "space": "실습실",
+   "mae": 16.022956141904256
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 5,
+   "space": "회의실",
+   "mae": 10.993985637342908
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 15,
+   "space": "사무실",
+   "mae": 15.713930700667017
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 15,
+   "space": "실습실",
+   "mae": 21.151242547665426
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 15,
+   "space": "회의실",
+   "mae": 24.754308797127468
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 30,
+   "space": "사무실",
+   "mae": 24.217466501387165
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 30,
+   "space": "실습실",
+   "mae": 26.29198689569683
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 30,
+   "space": "회의실",
+   "mae": 38.2229802513465
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 60,
+   "space": "사무실",
+   "mae": 40.6781181748421
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 60,
+   "space": "실습실",
+   "mae": 38.3833126733959
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 60,
+   "space": "회의실",
+   "mae": 62.76068222621185
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 5,
+   "space": "사무실",
+   "mae": 23.477057385435725
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 5,
+   "space": "실습실",
+   "mae": 23.70402253900793
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 5,
+   "space": "회의실",
+   "mae": 36.390417414721725
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 15,
+   "space": "사무실",
+   "mae": 29.31841710446058
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 15,
+   "space": "실습실",
+   "mae": 28.027805078409386
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 15,
+   "space": "회의실",
+   "mae": 45.470032914422504
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 30,
+   "space": "사무실",
+   "mae": 37.68389828424139
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 30,
+   "space": "실습실",
+   "mae": 34.300633571414515
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 30,
+   "space": "회의실",
+   "mae": 57.94774087372831
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 60,
+   "space": "사무실",
+   "mae": 53.665689500816555
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 60,
+   "space": "실습실",
+   "mae": 46.61609532101607
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 60,
+   "space": "회의실",
+   "mae": 80.38567474566129
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 5,
+   "space": "사무실",
+   "mae": 139.2966206245204
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 5,
+   "space": "실습실",
+   "mae": 94.367901835783
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 5,
+   "space": "회의실",
+   "mae": 183.51239669421489
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 15,
+   "space": "사무실",
+   "mae": 139.29782480373058
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 15,
+   "space": "실습실",
+   "mae": 94.39766985419986
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 15,
+   "space": "회의실",
+   "mae": 183.4310097017607
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 30,
+   "space": "사무실",
+   "mae": 139.32892096098226
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 30,
+   "space": "실습실",
+   "mae": 94.43110353580072
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 30,
+   "space": "회의실",
+   "mae": 183.31566654689183
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 60,
+   "space": "사무실",
+   "mae": 139.4368366684375
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 60,
+   "space": "실습실",
+   "mae": 94.44303907679593
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 60,
+   "space": "회의실",
+   "mae": 182.99227452389508
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 5,
+   "space": "사무실",
+   "mae": 0.014598902071896607
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 5,
+   "space": "실습실",
+   "mae": 0.02256580400887117
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 5,
+   "space": "회의실",
+   "mae": 0.017809694793536807
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 15,
+   "space": "사무실",
+   "mae": 0.02491588454046396
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 15,
+   "space": "실습실",
+   "mae": 0.04158384139914158
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 15,
+   "space": "회의실",
+   "mae": 0.04724865350089768
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 30,
+   "space": "사무실",
+   "mae": 0.0397326013812644
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 30,
+   "space": "실습실",
+   "mae": 0.07036077310329125
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 30,
+   "space": "회의실",
+   "mae": 0.08404847396768401
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 60,
+   "space": "사무실",
+   "mae": 0.0697604922967948
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 60,
+   "space": "실습실",
+   "mae": 0.12737880627724796
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 60,
+   "space": "회의실",
+   "mae": 0.15486535008976662
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 5,
+   "space": "사무실",
+   "mae": 0.039849625169706616
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 5,
+   "space": "실습실",
+   "mae": 0.0712889791180034
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 5,
+   "space": "회의실",
+   "mae": 0.08719928186714582
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 15,
+   "space": "사무실",
+   "mae": 0.05016985419987014
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 15,
+   "space": "실습실",
+   "mae": 0.09093932724497629
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 15,
+   "space": "회의실",
+   "mae": 0.11185517654099374
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 30,
+   "space": "사무실",
+   "mae": 0.06535638392066585
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 30,
+   "space": "실습실",
+   "mae": 0.11971361532039772
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 30,
+   "space": "회의실",
+   "mae": 0.14719628964691828
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 60,
+   "space": "사무실",
+   "mae": 0.09485242901835783
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 60,
+   "space": "실습실",
+   "mae": 0.17408527775669622
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 60,
+   "space": "회의실",
+   "mae": 0.21356373429084397
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 5,
+   "space": "사무실",
+   "mae": 0.40842925447140066
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 5,
+   "space": "실습실",
+   "mae": 0.42485800298515014
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 5,
+   "space": "회의실",
+   "mae": 0.6375224577793749
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 15,
+   "space": "사무실",
+   "mae": 0.40857800602089595
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 15,
+   "space": "실습실",
+   "mae": 0.4251760479647854
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 15,
+   "space": "회의실",
+   "mae": 0.6379671218109955
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 30,
+   "space": "사무실",
+   "mae": 0.40881175845581713
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 30,
+   "space": "실습실",
+   "mae": 0.4255752569843238
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 30,
+   "space": "회의실",
+   "mae": 0.6383399209486167
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 60,
+   "space": "사무실",
+   "mae": 0.40929564370462185
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 60,
+   "space": "실습실",
+   "mae": 0.42651527148844315
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 60,
+   "space": "회의실",
+   "mae": 0.6384567014013656
+  }
+ ],
+ "n_anchors_test": 16864,
+ "n_anchors_val": 25846
+}

@@ -1,0 +1,10 @@
+.env
+*.env
+*.db
+*.db-*
+__pycache__/
+.venv/
+pipeline/data/
+pipeline/artifacts/
+pipeline/results/*.log
+.DS_Store

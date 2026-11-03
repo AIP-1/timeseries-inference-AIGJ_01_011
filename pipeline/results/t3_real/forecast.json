@@ -1,0 +1,641 @@
+{
+ "conditions": {
+  "data": "실데이터(InfluxDB, 추정 시간표)",
+  "period": {
+   "train": "2025-09-03 ~ 2026-08-31",
+   "val": "2026-09-01 ~ 2026-09-30",
+   "test": "2026-10-01 ~ 2026-10-20"
+  },
+  "step": "5min",
+  "lookback_min": 120,
+  "horizon_min": 60,
+  "host": "team4",
+  "machine": "aarch64",
+  "nvpmodel_default": "default_mode",
+  "generated": "2026-10-20 15:36"
+ },
+ "rows": [
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 5,
+   "mae": 12.020430107526881
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 15,
+   "mae": 20.52058428209994
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 30,
+   "mae": 29.53800304395952
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "h_min": 60,
+   "mae": 47.20332661290322
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 5,
+   "mae": 0.01832715223186051
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 15,
+   "mae": 0.03787351472847205
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 30,
+   "mae": 0.06462566921930063
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "h_min": 60,
+   "mae": 0.11716352105358277
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 5,
+   "mae": 27.818203470904493
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 15,
+   "mae": 34.22095588235294
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 30,
+   "mae": 43.243925999499254
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "h_min": 60,
+   "mae": 60.13042262940123
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 5,
+   "mae": 0.06601634834041158
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 15,
+   "mae": 0.08419573535059197
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 30,
+   "mae": 0.11058904287521472
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "h_min": 60,
+   "mae": 0.16059305207297978
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 5,
+   "mae": 138.84540678133652
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 15,
+   "mae": 138.8289121194148
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 30,
+   "mae": 138.81244711348359
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "h_min": 60,
+   "mae": 138.74582789640172
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 5,
+   "mae": 0.4895624639891544
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 15,
+   "mae": 0.4898656075241485
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 30,
+   "mae": 0.4902006806755918
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "h_min": 60,
+   "mae": 0.4907161469807377
+  },
+  {
+   "model": "GRU",
+   "target": "co2",
+   "h_min": 5,
+   "mae": 11.550102582541845
+  },
+  {
+   "model": "GRU",
+   "target": "co2",
+   "h_min": 15,
+   "mae": 19.10889320385599
+  },
+  {
+   "model": "GRU",
+   "target": "co2",
+   "h_min": 30,
+   "mae": 27.437774484237487
+  },
+  {
+   "model": "GRU",
+   "target": "co2",
+   "h_min": 60,
+   "mae": 42.845908358728934
+  },
+  {
+   "model": "GRU",
+   "target": "temperature",
+   "h_min": 5,
+   "mae": 0.0242143962009927
+  },
+  {
+   "model": "GRU",
+   "target": "temperature",
+   "h_min": 15,
+   "mae": 0.04066517472639849
+  },
+  {
+   "model": "GRU",
+   "target": "temperature",
+   "h_min": 30,
+   "mae": 0.05924230927517071
+  },
+  {
+   "model": "GRU",
+   "target": "temperature",
+   "h_min": 60,
+   "mae": 0.09999703942347409
+  },
+  {
+   "model": "LSTM",
+   "target": "co2",
+   "h_min": 5,
+   "mae": 11.481218223161594
+  },
+  {
+   "model": "LSTM",
+   "target": "co2",
+   "h_min": 15,
+   "mae": 18.766645276373055
+  },
+  {
+   "model": "LSTM",
+   "target": "co2",
+   "h_min": 30,
+   "mae": 25.639416529964905
+  },
+  {
+   "model": "LSTM",
+   "target": "co2",
+   "h_min": 60,
+   "mae": 40.81535427665349
+  },
+  {
+   "model": "LSTM",
+   "target": "temperature",
+   "h_min": 5,
+   "mae": 0.02212272794328325
+  },
+  {
+   "model": "LSTM",
+   "target": "temperature",
+   "h_min": 15,
+   "mae": 0.04219888702446696
+  },
+  {
+   "model": "LSTM",
+   "target": "temperature",
+   "h_min": 30,
+   "mae": 0.0678873084250037
+  },
+  {
+   "model": "LSTM",
+   "target": "temperature",
+   "h_min": 60,
+   "mae": 0.11642286555450596
+  },
+  {
+   "model": "TCN",
+   "target": "co2",
+   "h_min": 5,
+   "mae": 11.624525172132847
+  },
+  {
+   "model": "TCN",
+   "target": "co2",
+   "h_min": 15,
+   "mae": 18.939438388952343
+  },
+  {
+   "model": "TCN",
+   "target": "co2",
+   "h_min": 30,
+   "mae": 26.207286027863688
+  },
+  {
+   "model": "TCN",
+   "target": "co2",
+   "h_min": 60,
+   "mae": 44.152411074822346
+  },
+  {
+   "model": "TCN",
+   "target": "temperature",
+   "h_min": 5,
+   "mae": 0.021280071410338355
+  },
+  {
+   "model": "TCN",
+   "target": "temperature",
+   "h_min": 15,
+   "mae": 0.04162024415811468
+  },
+  {
+   "model": "TCN",
+   "target": "temperature",
+   "h_min": 30,
+   "mae": 0.06332392131908486
+  },
+  {
+   "model": "TCN",
+   "target": "temperature",
+   "h_min": 60,
+   "mae": 0.10931451619189535
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "co2",
+   "h_min": 5,
+   "mae": 11.651518067583714
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "co2",
+   "h_min": 15,
+   "mae": 19.710506137483563
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "co2",
+   "h_min": 30,
+   "mae": 28.318765523959982
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "co2",
+   "h_min": 60,
+   "mae": 44.779244272110205
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "temperature",
+   "h_min": 5,
+   "mae": 0.023766687662047606
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "temperature",
+   "h_min": 15,
+   "mae": 0.040482254992680065
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "temperature",
+   "h_min": 30,
+   "mae": 0.06290574295040156
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "temperature",
+   "h_min": 60,
+   "mae": 0.1062388893609406
+  }
+ ],
+ "by_space": [
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "space": "사무실",
+   "mae": 40.6781181748421
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "space": "실습실",
+   "mae": 38.3833126733959
+  },
+  {
+   "model": "현재값 유지",
+   "target": "co2",
+   "space": "회의실",
+   "mae": 62.76068222621185
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "space": "사무실",
+   "mae": 0.0697604922967948
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "space": "실습실",
+   "mae": 0.12737880627724796
+  },
+  {
+   "model": "현재값 유지",
+   "target": "temperature",
+   "space": "회의실",
+   "mae": 0.15486535008976662
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "space": "사무실",
+   "mae": 53.665689500816555
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "space": "실습실",
+   "mae": 46.61609532101607
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "co2",
+   "space": "회의실",
+   "mae": 80.38567474566129
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "space": "사무실",
+   "mae": 0.09485242901835783
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "space": "실습실",
+   "mae": 0.17408527775669622
+  },
+  {
+   "model": "최근 1시간 평균",
+   "target": "temperature",
+   "space": "회의실",
+   "mae": 0.21356373429084397
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "space": "사무실",
+   "mae": 139.4368366684375
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "space": "실습실",
+   "mae": 94.44303907679593
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "co2",
+   "space": "회의실",
+   "mae": 182.99227452389508
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "space": "사무실",
+   "mae": 0.40929564370462185
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "space": "실습실",
+   "mae": 0.42651527148844315
+  },
+  {
+   "model": "어제 같은 시각",
+   "target": "temperature",
+   "space": "회의실",
+   "mae": 0.6384567014013656
+  },
+  {
+   "model": "GRU",
+   "target": "co2",
+   "space": "사무실",
+   "mae": 33.7328993085579
+  },
+  {
+   "model": "GRU",
+   "target": "co2",
+   "space": "실습실",
+   "mae": 39.88604714891422
+  },
+  {
+   "model": "GRU",
+   "target": "co2",
+   "space": "회의실",
+   "mae": 55.08567467078272
+  },
+  {
+   "model": "GRU",
+   "target": "temperature",
+   "space": "사무실",
+   "mae": 0.06303449406124798
+  },
+  {
+   "model": "GRU",
+   "target": "temperature",
+   "space": "실습실",
+   "mae": 0.10735219169733211
+  },
+  {
+   "model": "GRU",
+   "target": "temperature",
+   "space": "회의실",
+   "mae": 0.1300137268148591
+  },
+  {
+   "model": "LSTM",
+   "target": "co2",
+   "space": "사무실",
+   "mae": 32.941357073843825
+  },
+  {
+   "model": "LSTM",
+   "target": "co2",
+   "space": "실습실",
+   "mae": 38.15406918803506
+  },
+  {
+   "model": "LSTM",
+   "target": "co2",
+   "space": "회의실",
+   "mae": 51.49627691573686
+  },
+  {
+   "model": "LSTM",
+   "target": "temperature",
+   "space": "사무실",
+   "mae": 0.07460458777447776
+  },
+  {
+   "model": "LSTM",
+   "target": "temperature",
+   "space": "실습실",
+   "mae": 0.12189404919697425
+  },
+  {
+   "model": "LSTM",
+   "target": "temperature",
+   "space": "회의실",
+   "mae": 0.15327242400958685
+  },
+  {
+   "model": "TCN",
+   "target": "co2",
+   "space": "사무실",
+   "mae": 34.1000011247964
+  },
+  {
+   "model": "TCN",
+   "target": "co2",
+   "space": "실습실",
+   "mae": 43.35803845725722
+  },
+  {
+   "model": "TCN",
+   "target": "co2",
+   "space": "회의실",
+   "mae": 55.14914018778227
+  },
+  {
+   "model": "TCN",
+   "target": "temperature",
+   "space": "사무실",
+   "mae": 0.07277789094795564
+  },
+  {
+   "model": "TCN",
+   "target": "temperature",
+   "space": "실습실",
+   "mae": 0.12844142511738646
+  },
+  {
+   "model": "TCN",
+   "target": "temperature",
+   "space": "회의실",
+   "mae": 0.1269649054289293
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "co2",
+   "space": "사무실",
+   "mae": 33.147236463518496
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "co2",
+   "space": "실습실",
+   "mae": 45.258556354662986
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "co2",
+   "space": "회의실",
+   "mae": 56.08611550459528
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "temperature",
+   "space": "사무실",
+   "mae": 0.07801810611639062
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "temperature",
+   "space": "실습실",
+   "mae": 0.11122302015784304
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "target": "temperature",
+   "space": "회의실",
+   "mae": 0.1297967666269847
+  }
+ ],
+ "fits": [
+  {
+   "model": "GRU",
+   "val_loss": 0.1839,
+   "epochs": 11,
+   "params": 57688,
+   "train_s": 171.2
+  },
+  {
+   "model": "LSTM",
+   "val_loss": 0.1877,
+   "epochs": 10,
+   "params": 71064,
+   "train_s": 167.9
+  },
+  {
+   "model": "TCN",
+   "val_loss": 0.1863,
+   "epochs": 6,
+   "params": 117272,
+   "train_s": 121.7
+  },
+  {
+   "model": "GRU (일정 제외)",
+   "val_loss": 0.1846,
+   "epochs": 12,
+   "params": 54232,
+   "train_s": 166.5
+  }
+ ],
+ "best": "GRU",
+ "schedule_gain_ppm": 1.9333359133812706
+}

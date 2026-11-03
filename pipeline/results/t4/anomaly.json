@@ -1,0 +1,506 @@
+{
+ "conditions": {
+  "data": "합성(자체 생성기)",
+  "period": {
+   "train": "2026-08-31 ~ 2026-09-20",
+   "val": "2026-09-21 ~ 2026-09-27",
+   "test": "2026-09-28 ~ 2026-10-04"
+  },
+  "step": "5min",
+  "lookback_min": 120,
+  "horizon_min": 60,
+  "host": "team4",
+  "machine": "aarch64",
+  "nvpmodel_default": "default_mode",
+  "generated": "2026-10-20 11:37"
+ },
+ "summary": [
+  {
+   "탐지기": "모델(AE)",
+   "탐지율": "30% (3/10)",
+   "지연_중앙값_분": 0.0,
+   "하루_헛경보": 0.43,
+   "원인_센서_일치": "67%"
+  },
+  {
+   "탐지기": "규칙",
+   "탐지율": "60% (6/10)",
+   "지연_중앙값_분": 15.0,
+   "하루_헛경보": 0.0,
+   "원인_센서_일치": "100%"
+  },
+  {
+   "탐지기": "AE+규칙",
+   "탐지율": "90% (9/10)",
+   "지연_중앙값_분": 0.0,
+   "하루_헛경보": 0.43,
+   "원인_센서_일치": "89%"
+  },
+  {
+   "탐지기": "예측오차(FR)",
+   "탐지율": "60% (6/10)",
+   "지연_중앙값_분": 117.5,
+   "하루_헛경보": 0.43,
+   "원인_센서_일치": "100%"
+  },
+  {
+   "탐지기": "AE+FR+규칙",
+   "탐지율": "100% (10/10)",
+   "지연_중앙값_분": 15.0,
+   "하루_헛경보": 0.86,
+   "원인_센서_일치": "100%"
+  }
+ ],
+ "threshold_ae": 0.037903564001001755,
+ "threshold_fr": 1.3388283711438431,
+ "per_fault": {
+  "모델(AE)": [
+   {
+    "fault_id": 1,
+    "kind": "튄 값",
+    "space": "강의실A",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 2,
+    "kind": "튄 값",
+    "space": "라운지",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 3,
+    "kind": "튄 값",
+    "space": "회의실",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 4,
+    "kind": "값 고정",
+    "space": "강의실B",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 5,
+    "kind": "값 고정",
+    "space": "라운지",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 6,
+    "kind": "영점 틀어짐",
+    "space": "강의실A",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 7,
+    "kind": "냉방 정지",
+    "space": "강의실B",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 8,
+    "kind": "냉방 정지",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 9,
+    "kind": "환기 정지",
+    "space": "회의실",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 10,
+    "kind": "환기 정지",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 130.0,
+    "cause_ok": true
+   }
+  ],
+  "규칙": [
+   {
+    "fault_id": 1,
+    "kind": "튄 값",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 2,
+    "kind": "튄 값",
+    "space": "라운지",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 3,
+    "kind": "튄 값",
+    "space": "회의실",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 4,
+    "kind": "값 고정",
+    "space": "강의실B",
+    "detected": true,
+    "delay_min": 30.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 5,
+    "kind": "값 고정",
+    "space": "라운지",
+    "detected": true,
+    "delay_min": 45.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 6,
+    "kind": "영점 틀어짐",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 158.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 7,
+    "kind": "냉방 정지",
+    "space": "강의실B",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 8,
+    "kind": "냉방 정지",
+    "space": "강의실A",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 9,
+    "kind": "환기 정지",
+    "space": "회의실",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 10,
+    "kind": "환기 정지",
+    "space": "강의실A",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   }
+  ],
+  "AE+규칙": [
+   {
+    "fault_id": 1,
+    "kind": "튄 값",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 2,
+    "kind": "튄 값",
+    "space": "라운지",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 3,
+    "kind": "튄 값",
+    "space": "회의실",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 4,
+    "kind": "값 고정",
+    "space": "강의실B",
+    "detected": true,
+    "delay_min": 30.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 5,
+    "kind": "값 고정",
+    "space": "라운지",
+    "detected": true,
+    "delay_min": 45.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 6,
+    "kind": "영점 틀어짐",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 158.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 7,
+    "kind": "냉방 정지",
+    "space": "강의실B",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 8,
+    "kind": "냉방 정지",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 9,
+    "kind": "환기 정지",
+    "space": "회의실",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 10,
+    "kind": "환기 정지",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 130.0,
+    "cause_ok": true
+   }
+  ],
+  "예측오차(FR)": [
+   {
+    "fault_id": 1,
+    "kind": "튄 값",
+    "space": "강의실A",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 2,
+    "kind": "튄 값",
+    "space": "라운지",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 3,
+    "kind": "튄 값",
+    "space": "회의실",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 4,
+    "kind": "값 고정",
+    "space": "강의실B",
+    "detected": true,
+    "delay_min": 180.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 5,
+    "kind": "값 고정",
+    "space": "라운지",
+    "detected": false,
+    "delay_min": NaN,
+    "cause_ok": false
+   },
+   {
+    "fault_id": 6,
+    "kind": "영점 틀어짐",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 365.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 7,
+    "kind": "냉방 정지",
+    "space": "강의실B",
+    "detected": true,
+    "delay_min": 35.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 8,
+    "kind": "냉방 정지",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 30.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 9,
+    "kind": "환기 정지",
+    "space": "회의실",
+    "detected": true,
+    "delay_min": 185.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 10,
+    "kind": "환기 정지",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 55.0,
+    "cause_ok": true
+   }
+  ],
+  "AE+FR+규칙": [
+   {
+    "fault_id": 1,
+    "kind": "튄 값",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 2,
+    "kind": "튄 값",
+    "space": "라운지",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 3,
+    "kind": "튄 값",
+    "space": "회의실",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 4,
+    "kind": "값 고정",
+    "space": "강의실B",
+    "detected": true,
+    "delay_min": 30.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 5,
+    "kind": "값 고정",
+    "space": "라운지",
+    "detected": true,
+    "delay_min": 45.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 6,
+    "kind": "영점 틀어짐",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 158.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 7,
+    "kind": "냉방 정지",
+    "space": "강의실B",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 8,
+    "kind": "냉방 정지",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 0.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 9,
+    "kind": "환기 정지",
+    "space": "회의실",
+    "detected": true,
+    "delay_min": 185.0,
+    "cause_ok": true
+   },
+   {
+    "fault_id": 10,
+    "kind": "환기 정지",
+    "space": "강의실A",
+    "detected": true,
+    "delay_min": 55.0,
+    "cause_ok": true
+   }
+  ]
+ },
+ "sweep": [
+  {
+   "임계값_배율": 0.5,
+   "임계값": 0.019,
+   "탐지율": "70%",
+   "하루_헛경보": 6.71
+  },
+  {
+   "임계값_배율": 0.75,
+   "임계값": 0.028,
+   "탐지율": "40%",
+   "하루_헛경보": 2.29
+  },
+  {
+   "임계값_배율": 1.0,
+   "임계값": 0.038,
+   "탐지율": "30%",
+   "하루_헛경보": 0.43
+  },
+  {
+   "임계값_배율": 1.5,
+   "임계값": 0.057,
+   "탐지율": "20%",
+   "하루_헛경보": 0.29
+  },
+  {
+   "임계값_배율": 2.0,
+   "임계값": 0.076,
+   "탐지율": "20%",
+   "하루_헛경보": 0.14
+  },
+  {
+   "임계값_배율": 3.0,
+   "임계값": 0.114,
+   "탐지율": "20%",
+   "하루_헛경보": 0.0
+  }
+ ]
+}

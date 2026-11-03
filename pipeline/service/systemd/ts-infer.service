@@ -1,0 +1,14 @@
+[Unit]
+Description=Always-on time-series inference service (assignment 8)
+After=network-online.target ts-broker.service
+Wants=ts-broker.service
+
+[Service]
+WorkingDirectory=%h/timeseries/pipeline
+Environment=PYTHONWARNINGS=ignore::UserWarning
+ExecStart=%h/timeseries/.venv/bin/python -u service/infer.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

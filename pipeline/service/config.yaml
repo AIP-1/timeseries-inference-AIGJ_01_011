@@ -1,0 +1,38 @@
+# 추론 서비스 설정. 고친 뒤: systemctl --user restart ts-infer
+#
+# mode: real    → 수집기 DB(../data/sensors.db)를 읽는다. 시각은 수신 시각(KST). 모델은 실데이터로 학습한 *_real
+# mode: replay  → 합성 데이터 재생기(data/replay.db, ts-replay 서비스)를 읽는다. 모델은 합성 데이터로 학습한 것
+mode: real
+db: ../data/sensors.db
+schedule_csv: data/real/schedule.csv     # 학습 기간 CO2로 추정한 주간 시간표 (real/estimate_schedule.py)
+spaces: [사무실, 실습실, 회의실]
+space_map: {}
+artifact_tag: _real
+gap_min: 15              # 이 시간(분) 넘게 새 값이 없으면 '데이터 끊김' 경보. 회의실 센서가 10분 간격이라 15분
+expected_mae60: 42.8     # 시험 기간 60분 CO2 MAE(과제 3 실데이터, GRU). 최근 24시간 오차가 이것의 1.5배를 넘으면 경보
+night_drift_limit:       # 새벽(1~7시) 30분 평균 CO2 기준 = 학습 기간(2025-09~2026-08) 새벽 값의 상위 1%
+  사무실: 778
+  실습실: 876
+  회의실: 699
+stuck_min_count: 12      # 값 고정은 같은 값이 12번 넘게 이어질 때만(10분 간격 센서가 몇 번 같은 값을 보내는 것은 정상)
+
+# 합성 데이터 재생 모드로 되돌릴 때:
+# mode: replay
+# db: data/replay.db
+# schedule_csv: data/synth/schedule.csv
+# spaces: [강의실A, 강의실B, 라운지, 회의실]
+# artifact_tag: ""
+# gap_min: 5
+# (그리고 systemctl --user start ts-replay)
+
+api:
+  host: 0.0.0.0          # Tailscale·같은 네트워크의 다른 팀이 조회할 수 있게
+  port: 8000
+
+mqtt:
+  enabled: true          # Jetson 로컬 브로커(amqtt, service/broker.yaml)에 발행
+  host: localhost
+  port: 1883
+  client_id: team4-infer
+  topic_prefix: team4/inference
+  # 학원 브로커에 발행한다면: host: data.withio.net, username_env: MQTT_USER, password_env: MQTT_PASS

@@ -1,0 +1,12 @@
+[Unit]
+Description=Local MQTT broker for inference results (amqtt)
+After=network-online.target
+
+[Service]
+WorkingDirectory=%h/timeseries
+ExecStart=%h/timeseries/.venv/bin/amqtt -c %h/timeseries/pipeline/service/broker.yaml
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

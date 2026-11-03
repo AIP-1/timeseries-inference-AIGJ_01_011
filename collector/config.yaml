@@ -1,0 +1,55 @@
+# 수집기 설정. 메시지 형식이 바뀌거나 센서가 늘면 이 파일만 고친다.
+# 고친 뒤: systemctl --user restart collector
+
+db_path: data/sensors.db
+keep_raw: true            # 원본 메시지를 raw_messages 에 남긴다(형식이 바뀌어도 나중에 다시 해석 가능)
+
+mqtt:
+  client_id: team4-collector   # 같은 ID로 두 개를 띄우면 서로 끊으니 주의
+  keepalive: 60
+  reconnect_min_s: 1
+  reconnect_max_s: 30
+
+# 들어오는 메시지마다 위에서부터 topic 패턴을 비교해 처음 맞는 source 로 해석한다.
+# parser 종류
+#   chirpstack : LoRaWAN 센서. object 의 값을 꺼내고 위치는 deviceInfo.tags 에서 가져온다
+#   xflow      : 냉난방 상태. {"ts":..., "values": {"<장소>": {필드: 값}}}
+#   json_flat  : 값이 한 단계로 펼쳐진 JSON. 위치·장치·시각을 어디서 읽을지 설정으로 정한다
+#                (location_from_topic / location_field, device_from_topic / device_field, ts_field, id_field)
+#                예) - name: new_vendor
+#                      topic: sensors/+/+/env       # sensors/<공간>/<장치>/env
+#                      parser: json_flat
+#                      location_from_topic: 1
+#                      device_from_topic: 2
+#                      ts_field: timestamp
+#                      metrics: [co2, temperature, humidity]
+#                      rename: {carbon_dioxide: co2, temp: temperature, rh: humidity}
+sources:
+  - name: lorawan
+    topic: application/+/device/+/event/up
+    parser: chirpstack
+    location_tag: location        # deviceInfo.tags 안에서 공간 이름으로 쓸 키
+    spot_tag: spot
+    # 저장할 항목. 비우면 숫자 값을 모두 저장한다
+    metrics: [co2, temperature, humidity, pressure, tvoc, illumination, activity, LAeq, LAI, LAImax, battery]
+    # 센서 쪽 항목 이름이 다르면 여기서 표준 이름으로 바꾼다 (예: carbon_dioxide: co2)
+    rename: {}
+
+  - name: hvac
+    topic: xflow/hvacr/+/+/status
+    parser: xflow
+    metrics: [power, mode, fan_speed, current_temperature, target_temperature, current_humidity, error_code, online,
+              outdoor_temperature, wattmeter_1min_sum, compressor_discharge_temperature]
+    rename: {}
+
+  - name: hvac_controller
+    topic: xflow/controller/+/status
+    parser: xflow
+    metrics: []
+    rename: {}
+
+# 물리적으로 불가능한 값은 저장은 하되 flag=1 로 표시한다(정제는 과제 2에서 결정)
+valid_range:
+  co2: [300, 10000]
+  temperature: [-20, 50]
+  humidity: [0, 100]

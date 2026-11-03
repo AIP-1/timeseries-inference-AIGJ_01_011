@@ -1,0 +1,42 @@
+{
+ "conditions": {
+  "data": "합성(자체 생성기)",
+  "period": {
+   "train": "2026-08-31 ~ 2026-09-20",
+   "val": "2026-09-21 ~ 2026-09-27",
+   "test": "2026-09-28 ~ 2026-10-04"
+  },
+  "step": "5min",
+  "lookback_min": 120,
+  "horizon_min": 60,
+  "host": "team4",
+  "machine": "aarch64",
+  "nvpmodel_default": "default_mode",
+  "generated": "2026-10-20 11:10"
+ },
+ "removed": {
+  "co2": 258,
+  "temperature": 93,
+  "humidity": 0
+ },
+ "missing_pct": {
+  "co2": {
+   "강의실A": 4.565,
+   "강의실B": 4.385,
+   "라운지": 4.613,
+   "회의실": 4.494
+  },
+  "temperature": {
+   "강의실A": 4.46,
+   "강의실B": 4.306,
+   "라운지": 4.562,
+   "회의실": 4.403
+  },
+  "humidity": {
+   "강의실A": 4.413,
+   "강의실B": 4.258,
+   "라운지": 4.506,
+   "회의실": 4.369
+  }
+ }
+}

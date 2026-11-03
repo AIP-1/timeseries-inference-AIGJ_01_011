@@ -1,0 +1,13 @@
+[Unit]
+Description=Sensor MQTT collector (timeseries assignment 1)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=%h/timeseries
+ExecStart=%h/timeseries/.venv/bin/python -u %h/timeseries/collector.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
